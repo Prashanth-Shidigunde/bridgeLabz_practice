@@ -1,0 +1,49 @@
+What is GitHub ?
+---------------------
+GitHub is a web-based platform used to:
+
+Store code online
+Track changes in code
+Collaborate with developers
+Manage software projects
+
+It uses a technology called Git.
+
+What is Git?
+----------------
+Git is a Version Control System (VCS).
+It helps developers:-
+Save code history
+Undo mistakes
+Work on different features
+Collaborate safely
+--------------------------
+
+| Git                         | GitHub                                |
+| --------------------------- | ------------------------------------- |
+| A version control tool      | A cloud platform for Git repositories |
+| Installed on local computer | Works online                          |
+| Tracks code changes         | Stores and shares repositories        |
+| Created by Linus Torvalds   | Owned by Microsoft                    |
+
+
+What is a Repository (Repo)?
+-----------------------------
+
+A repository is a project folder containing:
+
+Source code
+Files
+History of changes
+
+Example:
+---------
+StudentManagementSystem/
+    src/
+    database/
+    README.md
+
+
+
+Git Commands - Description
+----------------------------
