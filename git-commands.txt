@@ -36,90 +36,68 @@ StudentManagementSystem/
 Git Commands - Description
 ----------------------------
 Repository Initialization Commands :-
-1. git init - create local git
-repository
-2. git clone <URL> - Copies repository from
-GitHub to local system
+1. git init 									- create local git repository
+2. git clone <URL> 								- Copies repository from GitHub to local system
+
 Configuration Commands :-
-3. git config --global user.name "<user-name>" - set git username
-4. git config --global user.email "<email>" - Sets Git email
-5. git config --list - display all
-configuration
+3. git config --global user.name "<user-name>" 	- set git username
+4. git config --global user.email "<email>" 	- Sets Git email
+5. git config --list 							- display all configuration
+
 Status & Tracking Commands :-
-6. git status - show file
-status(changes, non tracking files, tracking files)
-7. git diff - show file changes
-before staging
-8. git diff --staged - show staged
-changes
+6. git status 									- show file status(changes, non tracking files, tracking files)
+7. git diff 									- show file changes before staging
+8. git diff --staged 							- show staged changes
+
 Staging Commands :-
-9. git add <filename> - add single file
-to staging
-10. git add . - add all
-files in =to particular folder
-11. git restore --staged <filename> - remove from staging
+9. git add <filename> 							- add single file to staging
+10. git add . 									- add all files in =to particular folder
+11. git restore --staged <filename> 			- remove from staging
+
 Commit Commands :-
-12. git commit -m "<message>" - saves staged changes
-13. git commit -am "<message>" - add tracked files +
-commits
-14. git log - show
-commit history
-15. git log --online - compact commit
-history
+12. git commit -m "<message>" 					- saves staged changes
+13. git commit -am "<message>" 					- add tracked files + commits
+14. git log 									- show commit history
+15. git log --online 							- compact commit history
+
 Branch Commands :-
-16. git branch - list
-branches
-17. git branch <branch name> - create branch
-18. git checkout <branchName> - switches branch
-19. git checkout -b <branchname> - create + switch
-branch
-20. git branch -d <branchName> - delete branch
-??
-21. git branch -M <main> - rename branch
+16. git branch 									- list branches
+17. git branch <branch name> 					- create branch
+18. git checkout <branchName> 					- switches branch
+19. git checkout -b <branchname> 				- create + switch branch
+20. git branch -d <branchName> 					- delete branch
+21. git branch -M <main> 						- rename branch
+
 Merge Commands :-
-22. git merge <branchname> - merges branch
-into current branch
-23. git merge --abort - cancel
-merge ???
+22. git merge <branchname> 						- merges branch into current branch
+23. git merge --abort 							- cancel merge ???
+
 Remote Repository Commands :-
-24. git remote add original <URL> - Connects local repo
-to GitHub
-25. git remote -v - Shows
-remote URLs
-26. git remote remove original - Removes remote
-repository
+24. git remote add original <URL> 				- Connects local repo to GitHub
+25. git remote -v 								- Shows remote URLs
+26. git remote remove original 					- Removes remote repository
+
 Push Commands :-
-27. git push origin main - upload code to
-github
-28. git push -u origin main - First-time push with
-tracking
-29. git push - pushesh
-current branches
+27. git push origin main 						- upload code to github
+28. git push -u origin main 					- First-time push with tracking
+29. git push 									- pushesh current branches
+
 Pull & Fetch Commands :-
-30. git pull origin main - download +
-merge latest code
-31. git fetch - Download
-changes only
+30. git pull origin main 						- download + merge latest code
+31. git fetch 									- Download changes only
+
 Undo Commands :-
-32. git restore file name - Discards file
-changes
-33. git reset HEAD filename - remove files
-from staging
-34. git reset --soft HEAD~1 - remove last
-commit but keep changes
-35. git reset --hard HEAD~1 - remove delete
-and changes
-36. git revert commitId - create reverse
-commit
+32. git restore file name 						- Discards file changes
+33. git reset HEAD filename 					- remove files from staging
+34. git reset --soft HEAD~1 					- remove last commit but keep changes
+35. git reset --hard HEAD~1 					- remove delete and changes
+36. git revert commitId 						- create reverse commit
+
 File Removal Commands :-
-37. git rm <filename> - delete file
-from git
-38. git mv old new -
-rename/moves files
+37. git rm <filename> 							- delete file from git
+38. git mv old new 								- rename/moves files
+
 Information Commands :-
-39. git show - Displays
-commit details
-40. git stash - save
-temporary work
-41. git rebase - reapply
-commits 
+39. git show 									- Displays commit details
+40. git stash 									- save temporary work
+41. git rebase 									- reapply commits 
