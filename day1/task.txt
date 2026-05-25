@@ -1,0 +1,203 @@
+LINUX COMMANDS ANSWERS
+
+1. /etc/passwd OPERATIONS
+
+a) View /etc/passwd file
+cat /etc/passwd
+
+b) Print the 1st field from /etc/passwd file
+awk -F: '{print $1}' /etc/passwd
+
+c) Print all userids > 1000
+awk -F: '$3 > 1000 {print $1}' /etc/passwd
+
+d) Print the 2nd and 6th field
+awk -F: '{print $2, $6}' /etc/passwd
+
+e) Use command substitution to get user list and home directory
+for i in $(awk -F: '{print $1":"$6}' /etc/passwd)
+do
+ echo $i
+done
+
+f) Change ownership of above home directory with user retrieved above
+for i in $(awk -F: '{print $1":"$6}' /etc/passwd)
+do
+ user=$(echo $i | awk -F: '{print $1}')
+ home=$(echo $i | awk -F: '{print $2}')
+ sudo chown $user $home
+done
+
+g) Iterate above steps for all userid > 1000
+for i in $(awk -F: '$3 > 1000 {print $1":"$6}' /etc/passwd)
+do
+ user=$(echo $i | awk -F: '{print $1}')
+ home=$(echo $i | awk -F: '{print $2}')
+ sudo chown $user $home
+done
+
+
+2. FILE OPERATIONS
+
+a) Create files in current directory
+touch abc.txt def.txt ghi.txt jkl.txt
+
+b) Print list of files to move
+ls *.txt
+
+c) Segregate basename and extension of a file
+for i in *.txt
+do
+ echo $i | awk -F. '{print "Basename:",$1,"Extension:",$2}'
+done
+
+d) Create folder using basename
+for i in *.txt
+do
+ mkdir ${i%.*}
+done
+
+e) Move file to newly created folder
+for i in *.txt
+do
+ mv $i ${i%.*}
+done
+
+f) Iterate above steps for all files
+for i in *.txt
+do
+ echo $i | awk -F. '{print "Basename:",$1,"Extension:",$2}'
+ mkdir ${i%.*}
+ mv $i ${i%.*}
+done
+
+
+3. APPEND DATE TO LOG FILES
+
+a) Create files
+touch abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1
+
+b) Print list of files
+ls *.log.1
+
+c) Segregate basename and extension
+for i in *.log.1
+do
+ echo $i
+done
+
+d) Print date command
+date +%d%m%Y
+
+e) Append date to log filename
+for i in *.log.1
+do
+ mv $i ${i%.log.1}-$(date +%d%m%Y).log
+done
+
+
+4. CHECK FOLDER EXISTS
+
+a) Test if folder exists
+if [ -d test ]
+then
+ echo "Folder exists"
+fi
+
+b) Create if not exists
+if [ ! -d test ]
+then
+ mkdir test
+fi
+
+
+5. EXECUTE COMMAND AND CHECK STATUS
+
+a) Execute hello command
+hello
+
+b) Check status
+echo $?
+
+c) Execute ls command
+ls
+
+d) Check status
+echo $?
+
+
+6. ENVIRONMENT VARIABLE
+
+a) Check variable
+echo $usersecret
+
+b) Print variable
+env | grep usersecret
+
+c) Set variable
+export usersecret="dH34xJaa23"
+
+
+7. FIND WORD FROM LOG FILES
+
+grep -r "systemd" /var/log | wc -l
+
+
+8. PROCESS LIST TABLE
+
+ps -eo pid,ppid,cmd,%mem,%cpu
+
+
+9. FREQUENTLY ACCESS URLS
+
+awk '{print $7}' /var/log/httpd/access.log | sort | uniq -c | sort -nr | head -4
+
+
+10. UNIQUE URLS AT PARTICULAR HOURS
+
+awk '$4 ~ /10:/' /var/log/httpd/access.log | awk '{print $7}' | sort | uniq -c | sort -nr | head -4
+
+
+11. WEB RESPONSE CODE COUNT
+
+awk '$4 ~ /10:/' /var/log/httpd/access.log | awk '{print $9}' | sort | uniq -c | sort -nr
+
+
+12. UNIQUE CLIENT IPS
+
+awk '{print $1}' /var/log/httpd/access.log | sort | uniq -c | sort -nr | head -10
+
+
+13. AWK DATA ANALYSIS
+
+i) EmployeeName and TotalPay where BasePay > 10000
+awk -F, '$4 > 10000 {print $2,$8}' data.csv
+
+ii) Aggregate TotalPay for CAPTAIN
+awk -F, '$3=="CAPTAIN" {sum+=$8} END {print sum}' data.csv
+
+iii) JobTitle and OvertimePay between 7000 and 10000
+awk -F, '$5 >=7000 && $5 <=10000 {print $3,$5}' data.csv
+
+iv) Average BasePay
+awk -F, '{sum+=$4} END {print sum/NR}' data.csv
+
+
+14. DIFFERENCE BETWEEN FILES
+
+a) Create directories
+mkdir original updated
+
+b) Copy files
+cp original-file.sh original/
+cp updated-file.sh updated/
+
+c) Find differences
+diff -r original updated
+
+d) Backup and apply changes
+cp -r original original-backup
+patch original/original-file.sh updated/updated-file.sh
+
+e) Verify no differences
+diff -r updated original-backup

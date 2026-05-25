@@ -1,0 +1,27 @@
+Content :-
+
+1. Basic Commands
+2. Grep Commands
+3. Find, and 
+4. Env Commands
+
+
+
+C:\Users\onest\OneDrive\Desktop>mkdir terminalCommands
+
+C:\Users\onest\OneDrive\Desktop>cd terminalCommands
+
+C:\Users\onest\OneDrive\Desktop\terminalCommands>git --version
+git version 2.54.0.windows.1
+
+C:\Users\onest\OneDrive\Desktop\terminalCommands>git clone https://github.com/edurekavivekh/linux-content.git
+Cloning into 'linux-content'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 7 (delta 0), pack-reused 1 (from 1)
+Receiving objects: 100% (9/9), 12.22 MiB | 3.24 MiB/s, done.
+
+C:\Users\onest\OneDrive\Desktop\terminalCommands>cd linux-content
+
+C:\Users\onest\OneDrive\Desktop\terminalCommands\linux-content>

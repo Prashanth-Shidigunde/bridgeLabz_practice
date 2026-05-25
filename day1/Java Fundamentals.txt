@@ -1,0 +1,100 @@
+1: Eclipse IDE Installation
+2: Hello World Java Project
+3: Predefined and Custom Keys
+4: Maven Project
+
+
+1.Printing Hello Java Successfully
+2.Successfully create maven project and run basic program
+3.log4j uses to store log information of printing without manually its make easy to debugging, store logs, support log levels, maintain professional loging
+
+4. Setting Java Environment and Classpath
+5. Installation and Setting IDE 	
+6. What is Java? -programming language and platform 		independence
+	*Bytecode -intermediate code which generated after java compilation
+	*JDK -java development kit use to develop java applications, it contain JRE, comipler(javac), Debugging tools, Development TOols.(javac,java, javadoc, jar)
+	*JRE -running java applications. contain jvm, Java libraries, supporting files.
+	*JVM Basics - responsible for running java bytecode.Converts bytecode to machine code,Memory management,Garbage collection,Platform independence.
+	| Feature           | JDK                   | JRE                      | JVM                  |
+| ----------------- | --------------------- | ------------------------ | -------------------- |
+| Full Form         | Java Development Kit  | Java Runtime Environment | Java Virtual Machine |
+| Purpose           | Develop Java programs | Run Java programs        | Execute bytecode     |
+| Contains Compiler | Yes                   | No                       | No                   |
+| Contains JVM      | Yes                   | Yes                      | Itself               |
+| Contains JRE      | Yes                   | No                       | No                   |
+
+
+7. Main Features of JAVA
+	*Simple- simple syntax, no pointers, Automatic memory management,Easy error handling
+	*Object-Oriented. -Objects,class,encapsulation,polymorphism,inheritance and abstration.(code reuse, better security, easy maintain)
+	*Robust. - Strong and reliable, Exception handling, Automatic garbage collection, Strong memory management, Type checking.
+	*Platform Independent. - Write Once, Run Anywhere (WORA)
+	*Secure. - No pointers, Bytecode verification, JVM security, Exception handling.
+	*Portable. - java program can move from one system to another easily.
+	
+7. First HelloWorld Java Program
+	class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+	}
+8. Class - 
+	Organize code
+	Reuse code
+	Implement OOP concepts
+	Imp : Java program must contain at least one class.
+   Object -
+	Object is used to access:
+	Variables
+	Methods
+	defined inside a class
+		ClassName objectName = new ClassName();
+	Why Object Used?
+		Object helps:
+		Access class members
+		Store data
+		Call methods
+   Methods -
+	A block of code used to perform a task.
+		Methods help:
+		Reuse code
+		Reduce repetition
+		Improve readability
+		syntax : returnType methodName() {}
+		user defines and predefine methods
+		4types methods
+9. Variabes -container for storing values. 
+		types : instance, local,static
+	Local : A variable declared inside a method is called local variable.
+			Features :
+			Declared inside method
+			Accessible only inside method
+			Memory created when method run
+	Static Variable (Class Variable) : Variable declared using static keyword. Shared by all objects.
+			Features :
+			Shared among objects
+			Memory allocated once
+			Access using class name
+	Instance Variable : Variable declared inside class but outside method. Each object gets separate copy.
+			Features :
+			Belongs to object
+			Created when object created
+			Access using object
+10. Java Data Type - What type of value a variable can store
+		1. Primitive Datatypes : Predefined data types in Java, They store simple values.
+			byte-1, short-2, int-4, long-8, float-4, double-8, char-2,boolean-1
+		2. Non-Primitive Data Type : Created by programmer or Java. They store references.
+			String, Array, Class, Interface.
+			Features :
+			Can store multiple values
+			Size not fixed
+			Methods available. 
+		3. User-Defined Data Type : Data types created by user are called user-defined data types. 
+			Class, Interface, Enum
+			
+			
+		
+		
