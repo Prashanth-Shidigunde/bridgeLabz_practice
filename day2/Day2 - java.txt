@@ -1,0 +1,83 @@
+26/05/2026
+----------
+
+1. Access Modifier in Java :
+	Visibility and accessibility of class members.
+	Used for:
+		Variables
+		Methods
+		Constructors
+		Classes
+	Types: -
+	---------
+	a. Private:- private members are accessible only within the class
+				 private not accessible outside class directly
+				 Provide maximum secrity
+				 used for data hiding
+	b. Default:- only access inside package
+				 no keyword required
+				 package level access
+				 cannot access outside package
+	c. Protected:- inside same package but also outside package through inheritance
+				 supports inheritance
+				 more accessibility than default
+				 less accessible than public
+	d. public:-  public members are accessiblee everywhere in the project
+				 no access restriction
+				 accessible from any package
+				 maximum visibility
+2. Java Operators :
+	Symbols these are used to perform operation on operands or variable or values
+	Types :-
+	------------
+	a. Arithmetic Operators:-
+				Used for mathematical calculation.
+				+,-,*,/,%
+	b. Assignment operators:-
+				Used for Assign values to variable
+				=,+=,-=,*=,/=,%=
+	c. Auto Increment and Auto Decrement:-
+				used to increase or descrease  value by 1.
+				++,--;
+				PreIncrement,PostIncrement, PreDecrement, PostDecrement
+	d. Logical Operators:-
+				Used to combine conditions for evaluate based on multiple conditions
+				&&-logical AND -returns true if only both conditions arr true;
+				||-logical OR -return true atleast one condition is true
+				! - logical NOT - return reverse condition
+	e. Relational(Comparision) Operators:-
+				Used to compare values;
+				==,!=,<=,>=,<,>
+	f. Bitwise Operators:-
+				its used on Bits or works on bits only
+				& - Bitwise AND - Returns 1 only if both bits are 1.
+				| - Bitwise OR  - Returns 1 if at least one bit is 1.
+				^ - Bitwise XOR - Returns 1 if bits are different.
+				~ - Bitwise Compliment - Reverses all bits.
+				<< - Left Shift - Shifts bits to left. - a << n = a × 2ⁿ
+				>> - Right Shift- Shifts bits to right.- a >> n = a / 2ⁿ
+				Real-Time Uses
+				Bitwise operators used in:
+					Networking
+					Encryption
+					Graphics programming
+					Embedded systems
+					Performance optimization
+	g. Ternary Operator:-
+				it is shorthand of If else condition
+				(condition)?true:false;
+2. Control Statements : Control the flow of Execution.(order of program execution)
+	1. Conditional Statements:- Execute code based on conditions.
+		a. If : if condition is true then the block of statement will exection
+		b. if else: if condtion is true if block will execute if not else block will execute
+		c. else-if Ladder: check multiple conditions. if condtions true only that block will execute
+		d. Nested if Statement: If statement inside another if
+		e. switch - case statement: used to select the matching condition or used for multiple choice
+	2. Java Loops : Repeate the block of code mutiple times
+		a. for loop : used when number of iteration is known
+		b. while loop : used when number of iteration is unknown
+		c. do-while loop: used when we need to run block of code if condition is false
+		
+		
+	
+		
