@@ -1,0 +1,89 @@
+1. java terminolgy
+2. java platform independance
+3. java architecture
+4. java features
+
+java architecture :
+	*Class Loader : the .class read by jvm and store in method area. 
+	
+	*method area : ther is only one method area in jvm which is shared among all the class. this holds the class level info of each .class file
+	
+	*Heap : objects are allocated in this area.
+	
+	*stack : store temp variable and methods
+	
+	*PC Resgister : track which instruction has been executed . since instruction are executed by thread. each thread has a seperate pc registration
+	
+	*Native method area : A native method can access runtime data areas of the virtual machine
+	
+	*Native method interface: It enables java code to call or be called by native applications. native applications are program that are specific to the hardware and OS  of a system.
+	
+Java Features:
+	*  Object oriented Language
+	* Robust language
+	* Java is distributed
+	* mutithreading
+	*JRE
+5. print hello world
+6. sequence, selection, repetation Employee
+	a. sequences, selection, 
+
+*GIT Flow Expectations :
+
+• Create Repo for Shell Scripts
+• Add and Commit Files
+• Follow Message Hygiene
+• During Commit specify Add or Refactor in
+the message beginning
+• Create Branch
+• Push to Remote Master and Branch
+• Merge and Resolve Conflicts
+• Ability to look into History of Files
+• Comfortable with Git Commands
+
+*Java Programming Expectations :
+• Use of Java Programming Constructs
+• Use of proper names for the File Names,
+Variables and Constants
+• Use of Proper Indentations
+• Avoiding Printing to standard terminal
+instead use debug
+• No Commented Codes
+• Follow DRY Principle – Do not Repeat
+Yourself
+• Comfortable with Debug Execution Threads
+
+As a fan of geometry, I want to
+model a line based on a point
+consisting of (x, y) co
+
+-ordinates
+using the Cartesian system,
+So that I can calculate its
+length
+.
+UseCase 1:
+-----------
+- A Length as 2 Points (x1, y1) and (x2, y2) - Length of a Line = sqrt( (x2 - x1) ^ 2 + (y2- y1) ^ 2)
+
+UseCase 2:
+-------------
+that I know when two lines are
+the equal. - Using Java equals method to check equality of 2 Lengths is
+preferable.
+
+Use case 3:
+--------------
+As a fan of geometry, I want to
+compare two lines based on
+the end points, So that I know
+one line is equal, greater or
+less than the other line.
+
+
+
+	
+
+	
+	
+	
